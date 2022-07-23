@@ -4,6 +4,7 @@
   background-color: $color-grey-light-1;
 
   @include respond(tab-port) {
+    margin-top: -15vh;
     padding: 20rem 0;
   }
 }
