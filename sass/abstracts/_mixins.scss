@@ -44,6 +44,12 @@ breakpoint argument choice
       @content;
     }
   }
+  @if $breakpoint == desk {
+    @media only screen and (max-width: 93.75em) {
+      //1500px
+      @content;
+    }
+  }
   @if $breakpoint == big-desk {
     @media only screen and (max-width: 112.5em) {
       //1800px
