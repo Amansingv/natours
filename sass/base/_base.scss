@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  //defines what 1 rem is 10px
+  font-size: 62.5%; /*setting in % so that users default browser font-size doesn't affect much*/
+  // here 1 rem is 10px  i.e. 10px/16px = 62.5%;
+
+  // @include respond(phone) {
+  //   font-size: 50%; // here 1 rem is 8px  i.e. 8px/16px = 50%;
+  // }
+  @include respond(big-desk) {
+    font-size: 75%; // here 1 rem is 12px  i.e. 12px/16px = 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // here 1 rem is 9px  i.e. 9px/16px = 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // here 1 rem is 8px  i.e. 8px/16px = 50%;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7; /*it means line-height is 1.7 times bigger than normal line-height*/
+  color: $color-grey-dark;
+  padding: 3rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
