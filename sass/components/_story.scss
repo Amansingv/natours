@@ -83,4 +83,19 @@
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
   }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &__img {
+      transform: translateX(0rem) scale(1);
+    }
+
+    &:hover &__caption {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+      transform: translateX(0rem) scale(1);
+      filter: blur(0) brightness(100%);
+    }
+  }
 }

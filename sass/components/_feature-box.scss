@@ -31,4 +31,10 @@
   &:hover {
     transform: translateY(-1.5rem) scale(1.04);
   }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &:hover {
+      transform: translateY(0) scale(1);
+    }
+  }
 }

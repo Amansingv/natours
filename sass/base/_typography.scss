@@ -47,19 +47,24 @@
   letter-spacing: 0.2rem;
   transition: all 0.2s;
 
+  &:hover {
+    transform: skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
   @include respond(tab-port) {
     font-size: 3rem;
-    // letter-spacing: 1rem;
+  }
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    &:hover {
+      transform: skewX(0deg) skewY(0deg) scale(1);
+      text-shadow: none;
+    }
   }
 
   @include respond(phone) {
     font-size: 2.5rem;
-    // letter-spacing: 1rem;
-  }
-
-  &:hover {
-    transform: skewX(15deg) skewY(2deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
 
